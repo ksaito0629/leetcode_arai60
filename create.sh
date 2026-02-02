@@ -7,6 +7,8 @@
 # Convert a string to snake case
 to_snake_case() {
   local s="$1"
+  s=${s%.[mM][dD]}
+  
   # Convert to lowercase, replace non-alphanumeric characters (except underscore) with underscores
   s=$(echo "$s" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9]/_/g')
   # Replace multiple underscores with a single underscore
