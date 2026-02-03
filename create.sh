@@ -8,7 +8,7 @@
 to_snake_case() {
   local s="$1"
   s=${s%.[mM][dD]}
-  
+
   # Convert to lowercase, replace non-alphanumeric characters (except underscore) with underscores
   s=$(echo "$s" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9]/_/g')
   # Replace multiple underscores with a single underscore
@@ -62,15 +62,19 @@ $URL
 
 ### step1
 
-*
+-
+-
 
 ### step2
 
-*
+-
+-
 
 ### step3
 
-*
+-
+-
+
 EOF
 
 echo "Directory '$DIR_NAME' created with template files: step1.py, step2.py, step3.py, memo.md"
