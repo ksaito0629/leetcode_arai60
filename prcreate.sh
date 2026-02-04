@@ -17,6 +17,8 @@ to_snake_case() {
 
 TITLE="$1"
 URL="$2"
+NEXT_TITLE="$3"
+NEXT_URL="$4"
 
 # Remove /description and any trailing slashes from the URL if present
 URL=$(echo "$URL" | sed 's|description[/]*$||')
@@ -29,6 +31,10 @@ fi
 
 # Convert the raw input to snake case == branch name.
 DIR_NAME=$(to_snake_case "$TITLE")
+MEMO_PATH="${DIR_NAMES}/memo.md"
+
+if [ ! -f "$MEMO_PATH"]; then
+  echo "Error: $MEMO_PATH is absent."
 
 # Check if it's a Git repository
 if ! git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
@@ -39,7 +45,7 @@ fi
 echo "Adding, committing, and pushing to git..."
 # git push
 git switch "$DIR_NAME"
-git add "$DIR_NAME"
+git add "$DIR_NAME/$MEMO_PATH"
 git commit -m "$TITLE
 
 $URL"
@@ -57,3 +63,5 @@ echo "$TITLE を解いたのでレビューいただけると幸いです。"
 echo "問題: $URL"
 echo "PR: TBD"
 echo "言語: Python"
+
+gh pr view --web
