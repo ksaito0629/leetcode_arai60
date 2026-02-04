@@ -130,7 +130,7 @@ class Solution:
 
 ### step3
 
-- step2の2つ目のコードを10分以内に三回解く
+- step2の2つ目のコードのif文をまとめる
  ```python
  class Solution:
     def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
@@ -140,8 +140,17 @@ class Solution:
         carry = 0
 
         while l1 or l2 or carry:
-            val1 = l1.val if l1 else 0
-            val2 = l2.val if l2 else 0
+            if not l1:
+                val1 = 0
+            else:
+                val1 = l1.val
+                l1 = l1.next
+
+            if not l2:
+                val2 = 0
+            else:
+                val2 = l2.val
+                l2 = l2.next
 
             total = val1 + val2 + carry
             carry = total // 10
@@ -150,11 +159,8 @@ class Solution:
             node.next = ListNode(val)
             node = node.next
 
-            if l1: l1 = l1.next
-            if l2: l2 = l2.next
-
         return dummy_node.next
 ```
 
-###　所感
-- [コメント集](https://docs.google.com/document/d/11HV35ADPo9QxJOpJQ24FcZvtvioli770WWdZZDaLOfg/edit?tab=t.0)、Discord、他の人のコードを漁っていると、気になることがどんどん出てきて、一問（Add two numbers）解いてPRするまでに数日かかってしまった。
+###　その他
+- [コメント集](https://docs.google.com/document/d/11HV35ADPo9QxJOpJQ24FcZvtvioli770WWdZZDaLOfg/edit?tab=t.0)、Discord、他の人のコードを漁っていると、気になることがどんどん出てきて、一問（Add two numbers）解いてPRするまでに数日かかってしまった。ただ、ピンとこないことも割とあって（ワーキングメモリを解放するとか）、その辺りはコードを読み書きする量が増えるにつれて分かってくるのかなと思う。
