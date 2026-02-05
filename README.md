@@ -19,14 +19,16 @@ Refer to PRs.
 6.   Merge the PR (for better code search).
 
 ```shell
-# Both take <directory_name> and <URL>
+# take <Title> and <URL>
 $ ./create.sh "8. String to Integer (atoi)" https://leetcode.com/problems/string-to-integer-atoi/description/
-$ ./prcreate.sh "8. String to Integer (atoi)" https://leetcode.com/problems/string-to-integer-atoi/description/
+# take <Title> <URL> <Next Title>
+$ ./prcreate.sh "8. String to Integer (atoi)" https://leetcode.com/problems/string-to-integer-atoi/description/ "2. Add two numbers"
 ```
 
 ## Favorite repositories
 
 *   Python
+    *   https://github.com/SanakoMeine/leetcode/pulls
     *   https://github.com/hayashi-ay/leetcode/pulls
     *   https://github.com/olsen-blue/Arai60/pulls
     *   https://github.com/fuga-98/arai60/pulls
