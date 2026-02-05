@@ -71,10 +71,11 @@ PR_URL=$(echo -e "$REPORT_TEXT" | gh pr create \
 
 DISCORD_MSG="お世話になっております。
 
-"{$TITLE}に取り組んだので、お手すきの際にレビューいただけますと幸いです。
+${TITLE}に取り組みました。
+お手すきの際にレビューいただけますと幸いです。
 問題：${URL}
 RP：${PR_URL}
-言語：Python"
+言語：Python 3"
 
 echo "---------------------"
 echo -e "$DISCORD_MSG"
