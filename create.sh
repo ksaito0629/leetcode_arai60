@@ -47,9 +47,6 @@ git switch -c "$DIR_NAME"
 mkdir -p "$DIR_NAME"
 
 # Create empty files under the directory
-touch "$DIR_NAME/step1.py"
-touch "$DIR_NAME/step2.py"
-touch "$DIR_NAME/step3.py"
 touch "$DIR_NAME/memo.md"
 
 # Populate memo.md using a heredoc
