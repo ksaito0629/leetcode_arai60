@@ -75,7 +75,7 @@ ${TITLE}に取り組みました。
 お手すきの際にレビューいただけますと幸いです。
 問題：${URL}
 RP：${PR_URL}
-言語：Python 3"
+言語：Python3"
 
 echo "---------------------"
 echo -e "$DISCORD_MSG"
