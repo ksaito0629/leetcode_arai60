@@ -73,6 +73,8 @@ class Solution:
     - O(N)
 ```python
 import collections
+
+
 class Solution:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
         num_to_freq = defaultdict(int)
@@ -101,6 +103,8 @@ class Solution:
     - O(N)
 ```python
 import heapq
+
+
 class Solution:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
         count = Counter(nums)
