@@ -55,8 +55,6 @@ cat << EOF > "$DIR_NAME/memo.md"
 
 $URL
 
-## Comments
-
 ### step1
 
 -
