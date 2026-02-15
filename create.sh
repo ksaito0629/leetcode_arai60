@@ -54,7 +54,18 @@ cat << EOF > "$DIR_NAME/memo.md"
 # $TITLE
 
 $URL
-
+```python
+```
+```python
+```
+```python
+```
+```python
+```
+- 時間計算量
+    -
+- 空間計算量
+    -  時間計算量
 ### step1
 
 -
