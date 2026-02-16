@@ -16,15 +16,14 @@ to_snake_case() {
 }
 
 # Check if required positional arguments are provided
-if [ $# -lt 3 ]; then
-echo "Error: missing required arguments: 'TITLE', 'URL', 'NEXT_TITLE'."
-  echo "Usage: $0 <TITLE> <URL> <NEXT_TITLE>"
+if [ $# -lt 2 ]; then
+  echo "Error: missing required arguments: 'TITLE', 'URL'."
+  echo "Usage: $0 <TITLE> <URL>"
   exit 1
 fi
 
 TITLE="$1"
 URL="$2"
-NEXT_TITLE="$3"
 
 # Remove /description and any trailing slashes from the URL if present
 URL=$(echo "$URL" | sed 's|description[/]*$||')
@@ -54,12 +53,7 @@ $URL"
 git push --set-upstream origin "$DIR_NAME"
 
 
-REPORT_TEXT="${TITLE} を解いたのでレビューいただけると幸いです。"
-
-if [ -n "$NEXT_TITLE" ]; then
-  REPORT_TEXT="${REPORT_TEXT}\n次は、${NEXT_TITLE}に取り組みます。"
-fi
-REPORT_TEXT="${REPORT_TEXT}\n問題: ${URL}"
+REPORT_TEXT="${TITLE} を解いたのでレビューいただけると幸いです。\n問題: ${URL}"
 
 # Create PR
 echo "Creating PR..."
