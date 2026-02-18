@@ -50,7 +50,7 @@ mkdir -p "$DIR_NAME"
 touch "$DIR_NAME/memo.md"
 
 # Populate memo.md using a heredoc
-cat << EOF > "$DIR_NAME/memo.md"
+cat << 'EOF' > "$DIR_NAME/memo.md"
 # $TITLE
 
 $URL
@@ -65,7 +65,7 @@ $URL
 - 時間計算量
     -
 - 空間計算量
-    -  
+    -
 ### step1
 
 -
