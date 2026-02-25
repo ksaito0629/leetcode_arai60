@@ -40,6 +40,10 @@ class Solution:
 - enumerate を使えば idx を管理しなくてもよかった。
     - https://github.com/shining-ai/leetcode/blob/cdc997c18316f31891084b824f3ea8e2780df5df/arai60/11-16_HashMap/15_387_First%20Unique%20Character%20in%20a%20String/level_3.py
 - こちらの方がコードとしては単純だが、s を二回回すことにはなる。
+- 時間計算量
+    - O(n)
+- 空間計算量
+    - O(n)
 ```python
 from collections import defaultdict
 
